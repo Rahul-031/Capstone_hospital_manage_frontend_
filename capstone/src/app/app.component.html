@@ -1,0 +1,23 @@
+ <!-- <p style="font-size: large; text-align: right;">
+{{dateToday | date:'short'}} 
+ <br>
+  </p> -->
+  <ul>
+    <li ><a routerLink="/home" routerLinkActive="activebutton"
+      ariaCurrentWhenActive="page">Home</a></li>
+    <li ><a routerLink="/patient-login" routerLinkActive="activebutton"
+      ariaCurrentWhenActive="page">Patient</a></li>
+    <li ><a routerLink="/doctor-login" routerLinkActive="activebutton"
+      ariaCurrentWhenActive="page"> Doctor</a></li>
+      <li><a routerLink="/admin-login" routerLinkActive="activebutton"
+        ariaCurrentWhenActive="page">Admin</a></li>
+        <li ><a routerLink="/contact" routerLinkActive="activebutton"
+          ariaCurrentWhenActive="page"> Contact</a></li>
+          <li style="float:right; font-size: 30px;color: #FDEDD0; font-weight: bold;">PEOPLE'S HOSPITAL</li>
+  </ul>
+ <router-outlet></router-outlet>
+
+<div style="display: none;">
+
+<app-home></app-home>
+</div>

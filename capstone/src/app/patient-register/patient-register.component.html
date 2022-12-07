@@ -1,0 +1,59 @@
+ <div id="register">
+        <form>
+           <h2>PATIENT REGISTER</h2>
+      <div id="table1"> <table >
+            <tr>
+            <td> Enter your first name : </td>
+            <td> <input [(ngModel)]="pa.first_name" type="text" name= "first_name"  required> </td>
+            </tr>
+            <tr>
+                <td> Enter your last name : </td>
+                <td> <input [(ngModel)]="pa.last_name" type="text" name= "last_name"  required> </td>
+                </tr>
+            <tr>
+                <td> Select Gender : </td>
+                <td> <input [(ngModel)]="pa.gender" type="radio" value="male" name="gender"> Male 
+                <input [(ngModel)]="pa.gender" type="radio" value="female" name="gender"> Female </td>
+                </tr>
+                <tr>
+                    <td> Enter your birthdate : </td>
+                    <td> <input [(ngModel)]="pa.dof" type="date" name= "date"  required> </td>
+                    </tr>
+            <tr>
+                <td> Enter your Email id : </td>
+                <td> <input [(ngModel)]="pa.email" type="email" name= "email"  required> </td>
+                </tr>
+                <tr>
+                    <td> Enter your phone number : </td>
+                    <td> <input [(ngModel)]="pa.phone_no" type="text" name= "phonenumber"  required> </td>
+                    </tr>
+                    <tr> 
+                        
+                                <td class = "select">ID Proof: </td>
+                                <td>
+                                <select [(ngModel)]="pa.id_proof"> 
+                                    <option *ngFor="let i of id_proof" [value]="pa.id_proof">{{i.name}}</option>       
+                                </select></td>
+                        </tr>  
+                        <tr>
+                            <td>Enter ID NO:</td>
+                            <td><input [(ngModel)]="pa.id_no" type="text" name="number" required></td>
+                        </tr> 
+                        <tr> 
+                <td> Enter your password : </td>
+                <td> <input [(ngModel)]="pa.pass" type="password" name="password"></td>
+                </tr>
+                <tr>
+                    <td> Confirm password : </td>
+                    <td> <input type="password" name="password2"></td>
+                    </tr>
+            </table></div>
+            <button class="btn btn-success" (click)="createpat()" >Create</button>
+    </form>
+     <p><input type="submit" value="Submit" name="Submit" style="font-size: 15px;">
+         <input type="reset" value="Reset" name="Reset" style="font-size: 15px;"></p>
+<p><input type="submit"   routerLink="/patient-login" value="Login" style="font-size: 15px;"></p>
+         <!--<a href="patientlogin.html" style="font-size: 30px; background-color: silver;">Login</a>-->
+    <!--      <p><button> <a class="button" routerLink="/patient-login" style="font-size: 15px; ">Login</a></button></p> -->
+
+</div>

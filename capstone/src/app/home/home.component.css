@@ -1,0 +1,72 @@
+.row {
+  display: flex;
+}
+.column {
+  flex: 70%;
+  padding: 10px;
+   /* Should be removed. Only for demonstration */
+}
+table{
+  margin-left: 50px;
+}
+h2{
+  color: green;
+  text-align: center;
+  font-size: xx-large;
+}
+
+p{
+  font-size: 20px;
+  margin-left: 30px;
+}
+/*aside {
+  width: 50%;
+  padding-left: 15px;
+  margin-left: 15px;
+  float: left;
+  font-style: italic;
+   background-color: lightgray;
+} 
+#para1
+{
+  background: lightgrey;
+ font-family:cursive;
+  color: darkblue;
+}*/
+img{
+  width: 1000px;
+  margin-left: 130px;
+}
+h3{
+  font-size: 16px
+  ;margin-left: 30px;
+}
+#box1 {
+  text-align: center;
+  border-radius: 25px;
+  background: #005B9A;
+  padding: 10px; 
+   width: 96%;
+   background-image: url("C:\Users\Rahul.Dangre\Downloads\capstone (1)\capstone\src\assets\home1.jpg");
+   background-repeat: no-repeat;
+   background-size:cover;
+   margin-left: 15px;
+}
+h1{
+  color: #0e46a5;
+  font-size: xx-large;
+}
+#call
+{
+  color: darkred;
+}
+/* .row {
+    display: flex;
+  }
+  .column {
+   
+    padding: 12px 0 12px 24px;
+  } */
+.home{
+  margin: 50px;
+}

@@ -1,0 +1,36 @@
+.flex_container{
+    display: flex;
+}
+.flex-item1{
+    border: 2px;
+    flex: 25%;
+    margin-top: 5px;
+}
+.flex-item2{
+    flex: 75%;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+.flex-item1 > header {
+    border: 1px skyblue solid;
+}
+.main-header{
+    padding: 50px;
+    text-align: center;
+    font-size: 40px;
+    border-bottom: 2px black solid ;
+}
+.nav-item{
+    border: 1px gray solid;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+}
+.grid-item{
+    border: 1px black solid;
+    height: 150px;
+    max-width: 250px;
+    box-shadow: 6px 8px grey;
+}
