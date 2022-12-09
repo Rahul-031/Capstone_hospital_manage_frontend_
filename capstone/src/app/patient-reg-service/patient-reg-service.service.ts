@@ -25,4 +25,7 @@ export class PatientRegServiceService {
   public createPatient(patient: patients) {
     return this.httpClient.post<patients>("http://localhost:2020/api/patient", patient);
   }
+  public getpats(){
+    return this.httpClient.get<patients[]>('http://localhost:2020/api/patients')
+  }
 }

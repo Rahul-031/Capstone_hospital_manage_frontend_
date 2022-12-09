@@ -13,6 +13,7 @@ import { ContactComponent } from './contact/contact.component';
 import {FormsModule} from '@angular/forms';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { DepartmentsModule } from './departments/departments.module';
+import { PatientListComponent } from './patient-list/patient-list.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { DepartmentsModule } from './departments/departments.module';
     AdminComponent,
     ContactComponent,
     AdminLoginComponent,
+    PatientListComponent,
     
      ],
   imports: [
@@ -36,6 +38,7 @@ import { DepartmentsModule } from './departments/departments.module';
       {path:'contact',component:ContactComponent},
       {path :'', redirectTo: '/home', pathMatch: 'full'},
       {path:'patient-register',component: PatientRegisterComponent},
+      {path:'patient-list',component: PatientListComponent},
      
     ]),
     AppRoutingModule,
