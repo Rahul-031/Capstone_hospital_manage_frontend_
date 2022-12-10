@@ -14,6 +14,9 @@ import {FormsModule} from '@angular/forms';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { DepartmentsModule } from './departments/departments.module';
 import { PatientListComponent } from './patient-list/patient-list.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { FilterPipe } from './patient-list/addpipes/filter.pipe';
+import { DoctorRegComponent } from './doctor-reg/doctor-reg.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +29,8 @@ import { PatientListComponent } from './patient-list/patient-list.component';
     ContactComponent,
     AdminLoginComponent,
     PatientListComponent,
+    FilterPipe,
+    DoctorRegComponent,
     
      ],
   imports: [
@@ -39,12 +44,13 @@ import { PatientListComponent } from './patient-list/patient-list.component';
       {path :'', redirectTo: '/home', pathMatch: 'full'},
       {path:'patient-register',component: PatientRegisterComponent},
       {path:'patient-list',component: PatientListComponent},
+      {path:'doctor-register',component: DoctorRegComponent}
      
     ]),
     AppRoutingModule,
     FormsModule,
     DepartmentsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

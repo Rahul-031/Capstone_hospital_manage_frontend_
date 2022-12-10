@@ -1,8 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { VirtualTimeScheduler } from 'rxjs';
 
 export class patients{
+  static id: string;
   constructor(
+    public id:number,
     public first_name:string,
     public last_name:string,
     public gender:string,
@@ -27,5 +30,8 @@ export class PatientRegServiceService {
   }
   public getpats(){
     return this.httpClient.get<patients[]>('http://localhost:2020/api/patients')
+  }
+  public getpatByid(id: number){
+    return this.httpClient.get<patients[]>("http://localhost:2020/api/"+id)  
   }
 }

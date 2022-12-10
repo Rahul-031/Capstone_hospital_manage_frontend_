@@ -1,5 +1,9 @@
-
-       body
-       {
-        background-color: #DCF0F7;
-       }
+body{
+       background-image: url("C:\Hospital Management system\capstone\src\assets\background\back.png");
+       background-repeat: no-repeat;
+       background-attachment: fixed; 
+       background-size: 100% 100%;
+} 
+input{
+       background-color: transparent;
+}  

@@ -11,7 +11,7 @@ export class PatientRegisterComponent implements OnInit {
   {id:"VoterCard",name:"Voter Card"},
   {id:"PanCard",name:"Pan Card"},]
   
-  pa : patients = new patients("","","","","","","","","")
+  pa : patients = new patients(0,"","","","","","","","","")
   
   constructor( private prst: PatientRegServiceService) { }
 

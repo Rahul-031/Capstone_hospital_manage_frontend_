@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { patients,PatientRegServiceService } from '../patient-reg-service/patient-reg-service.service';
 
 @Component({
@@ -15,6 +16,8 @@ export class PatientLoginComponent implements OnInit {
   regularExpression = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/
   patient: patients[] =[]
   len:number = this.patient.length
+  counter:number=0
+  
   
   
   
@@ -43,20 +46,27 @@ export class PatientLoginComponent implements OnInit {
         
         if(i.email==form.value.user && i.pass==form.value.pass){
         console.log(i.email==form.value.user && i.pass==form.value.pass)
-          console.log("lets go")
-        }else{
-          console.log("username or password check karo")
+        this.router.navigate(['/deptlist'])
+        this.counter=1
+        console.log("lets go")
+        break
+        }
+        
+        if(this.patient.indexOf(i)==this.patient.length-1){
+          console.log(this.patient.indexOf(i))
+          console.log(i)
+          alert("username or pass check karo")
         }
      }
     
     }
   }
   
-  constructor(private httpClientService:PatientRegServiceService) { }
+  constructor(private httpClientService:PatientRegServiceService,private router:Router) { }
 
   ngOnInit(): void {
     this.httpClientService.getpats().subscribe(data=>{this.patient=data
-      console.log(this.patient.length)
+      console.log(this.patient)
        })
   }
 

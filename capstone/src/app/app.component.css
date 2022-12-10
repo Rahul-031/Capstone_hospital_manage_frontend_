@@ -28,6 +28,10 @@ li a:hover:not(.active) {
   background-color:whitesmoke;
 }
 
+body{
+  background-image: url("C:\Hospital Management system\capstone\src\assets\background\MicrosoftTeams-image.png");
+}
+
 .active {
   background-color: #04AA6D;
 }
