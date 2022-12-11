@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-import { patients,PatientRegServiceService } from '../patient-reg-service/patient-reg-service.service';
-
+import { patients,PatientRegServiceService } from '../services/patient-reg-service/patient-reg-service.service';
+import { LoginServiceService } from '../services/login-service.service';
 @Component({
   selector: 'app-patient-login',
   templateUrl: './patient-login.component.html',
@@ -17,6 +17,7 @@ export class PatientLoginComponent implements OnInit {
   patient: patients[] =[]
   len:number = this.patient.length
   counter:number=0
+  Log:boolean=this.log.counter
   
   
   
@@ -47,7 +48,7 @@ export class PatientLoginComponent implements OnInit {
         if(i.email==form.value.user && i.pass==form.value.pass){
         console.log(i.email==form.value.user && i.pass==form.value.pass)
         this.router.navigate(['/deptlist'])
-        this.counter=1
+        this.log.counter=true
         console.log("lets go")
         break
         }
@@ -62,12 +63,13 @@ export class PatientLoginComponent implements OnInit {
     }
   }
   
-  constructor(private httpClientService:PatientRegServiceService,private router:Router) { }
+  constructor(private httpClientService:PatientRegServiceService,private router:Router,private log:LoginServiceService) { }
 
   ngOnInit(): void {
     this.httpClientService.getpats().subscribe(data=>{this.patient=data
       console.log(this.patient)
-       })
+      console.log(this.log.counter)
+       }) 
   }
 
 }

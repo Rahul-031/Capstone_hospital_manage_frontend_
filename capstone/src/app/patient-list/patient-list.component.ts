@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { patients,PatientRegServiceService } from '../patient-reg-service/patient-reg-service.service';
+import { patients,PatientRegServiceService } from '../services/patient-reg-service/patient-reg-service.service';
 import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-patient-list',

@@ -1,0 +1,124 @@
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
+
+<div class="container">
+    <form>
+    <div class="card p-4 mt-5">
+        <div class="row g-3">
+            <div class="col-12 mb-4" style="background-color:white;border-radius: 10px;">
+                <h4 style="color:black;">ADD DOCTORS</h4>
+                <span class="text-muted">Please make the payment to start enjoying all the features of our premium plan as soon as possible</span>
+            </div>
+            <div class="col-12">
+                <div class="form-check form-check-inline">
+                    <input [(ngModel)]="doc.gender" class="form-check-input" type="radio" name="gender" id="Roundtrip" value="Male">
+                    <label  class="form-check-label" for="Roundtrip">Male</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input [(ngModel)]="doc.gender" class="form-check-input" type="radio" name="gender" id="Oneway" value="Female">
+                    <label class="form-check-label" for="Oneway">Female</label>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="form-floating">
+                    <input [(ngModel)]="doc.first_name" name="first_name" type="text" class="form-control" placeholder="FLYING FROM">
+                    <label>FIRST NAME</label>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="form-floating">
+                    <input [(ngModel)]="doc.last_name" name="last_name" type="text" class="form-control" placeholder="FLYING TO">
+                    <label>LAST NAME</label>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="form-floating">
+                    <input [(ngModel)]="doc.phone_no" name="phone_no" type="text" class="form-control" placeholder="FLYING TO">
+                    <label>PHONE NUMBER</label>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="form-floating">
+                    <input [(ngModel)]="doc.email" name="email" type="email" class="form-control" placeholder="FLYING TO">
+                    <label>EMAIL ADDRESS</label>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="form-floating">
+                    <input [(ngModel)]="doc.dob" name="dob" type="date" class="form-control" placeholder="DEPARTING">
+                    <label>DATE OF BIRTH </label>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="form-floating">
+                    <input [(ngModel)]="doc.registration_date" name="registration_date" type="datetime-local" class="form-control" placeholder="RETURNING">
+                    <label>REGISTRATION DATE</label>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="form-floating">
+                    <input [(ngModel)]="doc.qualification" name="qualification" type="text" class="form-control" placeholder="FLYING TO">
+                    <label>QUALIFICATION</label>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="form-floating">
+                    <input type="text" [(ngModel)]="doc.age" name="age" class="form-control" placeholder="FLYING TO">
+                    <label>AGE</label>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="form-floating">
+                    <input type="password" [(ngModel)]="doc.pass" name="pass" class="form-control" placeholder="FLYING TO">
+                    <label>PASSWORD</label>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="form-floating">
+                    <input type="password" name="pass2" class="form-control" placeholder="FLYING TO">
+                    <label>CONFIRM PASSWORD</label>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <div class="form-floating">
+                    <select [(ngModel)]="doc.specialization" class="form-select">
+        <option selected="" hidden=""></option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+        </select>
+                    <label>SPECIALIZATION</label>
+                </div>
+            </div>
+           
+            <div class="col-lg-4 col-md-12">
+                <div class="form-floating">
+                    <select [(ngModel)]="doc.slot_id" class="form-select">
+        <option selected="" hidden="">Open this select menu</option>
+        <option value="1">Economy</option>
+        <option value="2">Premium</option>
+        <option value="3">Business</option>
+        </select>
+                    <label>DOCTORS SLOTS</label>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <div class="form-floating">
+                    <select [(ngModel)]="doc.department_id" class="form-select">
+        <option selected="" hidden=""></option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+        </select>
+                    <label>DEPARTMENTS</label>
+                </div>
+            </div> 
+            <div class="col-12 mt-4">
+                <button (click)="createDoc()"  class="btn btn-primary text-uppercase">ADD DOCTOR<i class="fa fa-heartbeat" style="font-size:48px;color:red"></i></button>
+            </div>
+        </div>
+    </div>
+  </form>
+</div>

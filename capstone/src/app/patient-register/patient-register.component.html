@@ -31,8 +31,10 @@
                         
                                 <td class = "select">ID Proof: </td>
                                 <td>
-                                <select [(ngModel)]="pa.id_proof"> 
-                                    <option *ngFor="let i of id_proof" [value]="pa.id_proof">{{i.name}}</option>       
+                                    
+                                    
+                                <select [(ngModel)]="pa.id_proof" name="select">
+                                    <option value="{{i.name}}" *ngFor="let i of this.id_proof"  >{{i.name}}</option>       
                                 </select></td>
                         </tr>  
                         <tr>

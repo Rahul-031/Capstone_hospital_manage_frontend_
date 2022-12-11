@@ -35,6 +35,10 @@ body{
 .active {
   background-color: #04AA6D;
 }
+button{
+  background-color:  #333366;
+  border: 0;
+}
 
 /* .grid-container {
     display: grid;

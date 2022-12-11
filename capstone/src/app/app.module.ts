@@ -17,6 +17,7 @@ import { PatientListComponent } from './patient-list/patient-list.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FilterPipe } from './patient-list/addpipes/filter.pipe';
 import { DoctorRegComponent } from './doctor-reg/doctor-reg.component';
+import { DoctorRegAndListComponent } from './doctor-reg-and-list/doctor-reg-and-list.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { DoctorRegComponent } from './doctor-reg/doctor-reg.component';
     PatientListComponent,
     FilterPipe,
     DoctorRegComponent,
+    DoctorRegAndListComponent,
     
      ],
   imports: [
@@ -44,7 +46,7 @@ import { DoctorRegComponent } from './doctor-reg/doctor-reg.component';
       {path :'', redirectTo: '/home', pathMatch: 'full'},
       {path:'patient-register',component: PatientRegisterComponent},
       {path:'patient-list',component: PatientListComponent},
-      {path:'doctor-register',component: DoctorRegComponent}
+      {path:'doctor-register',component: DoctorRegAndListComponent}
      
     ]),
     AppRoutingModule,

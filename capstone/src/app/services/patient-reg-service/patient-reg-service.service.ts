@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { VirtualTimeScheduler } from 'rxjs';
 
 export class patients{
-  static id: string;
+  
   constructor(
     public id:number,
     public first_name:string,
@@ -14,7 +14,8 @@ export class patients{
     public phone_no:string,
     public id_proof:string,
     public id_no:string,
-    public pass:string
+    public pass:string,
+    public status:string
 
   ){}
 }

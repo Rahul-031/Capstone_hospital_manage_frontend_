@@ -1,21 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { PatientRegServiceService,patients } from '../patient-reg-service/patient-reg-service.service';
-
+import { PatientRegServiceService,patients } from '../services/patient-reg-service/patient-reg-service.service';
+import { proofId } from './id_proof';
 @Component({
   selector: 'app-patient-register',
   templateUrl: './patient-register.component.html',
   styleUrls: ['./patient-register.component.css']
 })
 export class PatientRegisterComponent implements OnInit {
-  id_proof =[{id:"adharCard",name:"Adhar Card"},
-  {id:"VoterCard",name:"Voter Card"},
-  {id:"PanCard",name:"Pan Card"},]
   
-  pa : patients = new patients(0,"","","","","","","","","")
+  pa : patients = new patients(0,"","","","","","","","","","active")
   
   constructor( private prst: PatientRegServiceService) { }
-
+  id_proof=[new proofId("adhar"),new proofId("voter"),new proofId("pan"), ]
   ngOnInit(): void {
+    console.log(this.id_proof);
   }
 
   createpat():void{
