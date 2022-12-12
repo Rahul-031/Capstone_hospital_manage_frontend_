@@ -1,17 +1,48 @@
 h2
 {
-    color: green;font-size: 40px;
+    color: darkmagenta;font-size: 40px;
+    text-align: center;
+    font-style: italic;
 }
 h4{
-    color: green;font-size: 40px;
-    text-align: left;
-}
-#contact{
+    color: darkmagenta;font-size: 40px;
     text-align: center;
 }
-#contactno
-{
-    color: purple;
-    border-style: solid;
-   width: fit-content;
+
+p{
+    text-align: center;
+font-style: italic;
+
 }
+h3{
+    text-align: center;
+font-style: italic;
+font-size: xx-large;
+color: darkmagenta;
+}
+
+
+.container{
+    width: 100%;
+}
+.centerDiv
+{
+    width: 100%;
+    margin: 0 auto;
+}
+.div1
+{
+    width: 45%;
+    height: 100px;
+    float:left;
+    
+}
+.div2
+{
+    width: 55%;
+    background-color: white;
+    float:left;
+    
+   
+}
+

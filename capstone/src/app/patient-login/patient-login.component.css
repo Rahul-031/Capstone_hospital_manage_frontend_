@@ -89,7 +89,7 @@
 
 .login100-form-title {
     font-size: 25px;
-    color: #243762;
+    /* color: #243762; */
     line-height: 1.2;
     text-transform: uppercase;
     text-align: center;
@@ -99,7 +99,7 @@
 
 .login100-form-subtitle {
     font-size: 16px;
-    color: #243762;
+    /* color: #243762; */
     line-height: 1.2;
     text-align: center;
     width: 100%;
