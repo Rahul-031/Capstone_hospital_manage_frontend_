@@ -8,6 +8,8 @@ import { doctors } from './doctor';
 
 export class DoctorRegistrationServiceService {
 
+  deptId!:number
+  
   constructor(private httpClient:HttpClient) { 
   }
   public createDoctor(doctor: doctors) {

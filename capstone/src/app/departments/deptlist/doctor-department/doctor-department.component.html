@@ -1,15 +1,15 @@
 <table>
 
 
-    <tr>
+    <tr *ngFor="let d of this.doctor">
         <td>
             <img src="assets/cardio1.jpg">
         </td>
         <td>
-            <h2>DR. A. NAGA SRINIVAAS</h2>
-            <p>Consultant-Interventional Cardiology</p>
+            <h2>{{d.first_name}} {{d.last_name}}</h2>
+            
             <h4>QUALIFICATION</h4>
-            <p>MD | DM | FSCAI</p>
+            <p>{{d.qualification}}</p>
             <p><input type="submit"  value="Book Appointment" name="submit" style="font-size: 12px;">
             <input type="submit" routerLink="/deptlist" value="Go Back" name="submit" style="font-size: 12px;"></p>
         </td>

@@ -7,9 +7,10 @@
 <div class="card" style="width: 250px;border-style: solid;border-width: 1px;margin: auto;margin-top: 40px;grid-template-columns: auto auto;background-color: bisque;" *ngFor="let d of this.depts" >
   <img src="https://i.pinimg.com/originals/61/c7/a2/61c7a28bbb12ee7d75064e9dba23305e.png" style="width: 248px;height: 178px;" class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title">{{d.department}}</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <button (click)="storeid()" ><a href="#" class="btn btn-primary">Book Appointment</a></button>
+    <h5 class="card-title"  >{{d.department}}</h5>
+    <h5 class="card-title"  >{{d.id}}</h5>
+    <p class="card-text" >Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <button (click)="storeid(idpartid)" #idpartid value="{{d.id}}" ><a  class="btn btn-primary">Book Appointment</a></button>
   </div>
 </div>
 </div>

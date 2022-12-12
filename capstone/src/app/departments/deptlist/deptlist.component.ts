@@ -6,6 +6,7 @@ import { DepartmentServiceService } from 'src/app/services/department-service/de
 import { department } from 'src/app/services/department-service/department';
 import { doctors } from 'src/app/services/doctor-reg-service/doctor';
 import { DoctorRegistrationServiceService } from 'src/app/services/doctor-reg-service/doctor-registration-service.service';
+import { identifierName } from '@angular/compiler';
 @Component({
   selector: 'app-deptlist',
   templateUrl: './deptlist.component.html',
@@ -17,6 +18,7 @@ export class DeptlistComponent implements OnInit {
   depts:department[]=[]
   constructor(private login:LoginServiceService,private router:Router,private dept:DepartmentServiceService,private doc:DoctorRegistrationServiceService) { }
   doctor:doctors[]=[]
+  // departId:number=0
   
   logout( ){
     this.login.counter=false
@@ -24,7 +26,12 @@ export class DeptlistComponent implements OnInit {
     console.log(this.login.counter)
     this.router.navigate(['/home'])
   }
-  storeid(){
+  storeid(id:any){
+    this.doc.deptId=id.value
+    console.log(this.doc.deptId)
+    this.doc.getDoctorsbyid(id.value).subscribe(data=>{this.doctor=data
+      console.log(this.doctor)})
+    this.router.navigate(['/doctor-dept'])
     
   }
 
@@ -32,8 +39,7 @@ export class DeptlistComponent implements OnInit {
     this.dept.getdept().subscribe(data=>{this.depts=data
       console.log(this.depts)
 
-    this.doc.getDoctorsbyid(5).subscribe(data=>{this.doctor=data
-    console.log(this.doctor)})
+    
   })
   
 
