@@ -18,6 +18,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FilterPipe } from './patient-list/addpipes/filter.pipe';
 import { DoctorRegComponent } from './doctor-reg/doctor-reg.component';
 import { DoctorRegAndListComponent } from './doctor-reg-and-list/doctor-reg-and-list.component';
+import { DoctorDepartmentComponent } from './departments/deptlist/doctor-department/doctor-department.component';
+
 
 @NgModule({
   declarations: [
@@ -34,6 +36,7 @@ import { DoctorRegAndListComponent } from './doctor-reg-and-list/doctor-reg-and-
     DoctorRegComponent,
     DoctorRegAndListComponent,
     
+    
      ],
   imports: [
     BrowserModule,RouterModule.forRoot([
@@ -46,7 +49,8 @@ import { DoctorRegAndListComponent } from './doctor-reg-and-list/doctor-reg-and-
       {path :'', redirectTo: '/home', pathMatch: 'full'},
       {path:'patient-register',component: PatientRegisterComponent},
       {path:'patient-list',component: PatientListComponent},
-      {path:'doctor-register',component: DoctorRegAndListComponent}
+      {path:'doctor-register',component: DoctorRegAndListComponent},
+      {path:'doctor-dept',component: DoctorDepartmentComponent}
      
     ]),
     AppRoutingModule,

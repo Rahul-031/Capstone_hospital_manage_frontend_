@@ -1,49 +1,9 @@
-.column {
-    float: left;
-    width: 25%;
-    padding: 0 10px;
-    padding-bottom: 40px;
-
-  }
-  * {
-    box-sizing: border-box;
-  }
+.grid{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 20px;
   
-  .row {margin: 0 10px;}
-  
-  .card {
-      
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 16px;
-    
-    background-color: #f1f1f1;
-    height: 400px;
-    background-color: #BDD8DA;
-    border-radius: 6px;
-  }
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-   
-  }
-  .button1
-  {
-      text-align: center;
-      height: 50px;
-      
-  }
-  .button1>input{
-    color:  #58635a;
-    
-  }
-
-  h2{
-    color:darkgreen;
-    text-align: center;
 }
-img{
-  width: 100%;
-  height: 50%;
-  object-fit: contain;
+.card{
+  box-shadow: 5px 10px 8px 10px #888888;
 }

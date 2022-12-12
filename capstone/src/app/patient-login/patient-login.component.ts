@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { patients,PatientRegServiceService } from '../services/patient-reg-service/patient-reg-service.service';
-import { LoginServiceService } from '../services/login-service.service';
+import { LoginServiceService } from '../services/login-logoutService/login-service.service';
 @Component({
   selector: 'app-patient-login',
   templateUrl: './patient-login.component.html',
