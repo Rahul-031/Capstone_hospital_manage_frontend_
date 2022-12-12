@@ -15,6 +15,7 @@ import { NephrologyComponent } from './nephrology/nephrology.component';
 import { NeurologyComponent } from './neurology/neurology.component';
 import { OrthopedicComponent } from './orthopedic/orthopedic.component';
 import { RadiologyComponent } from './radiology/radiology.component';
+import { DoctorDepartmentComponent } from './deptlist/doctor-department/doctor-department.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { RadiologyComponent } from './radiology/radiology.component';
         NephrologyComponent,
         NeurologyComponent,
         OrthopedicComponent,
-        RadiologyComponent
+        RadiologyComponent,
+        DoctorDepartmentComponent
   ],
   imports: [
     CommonModule,

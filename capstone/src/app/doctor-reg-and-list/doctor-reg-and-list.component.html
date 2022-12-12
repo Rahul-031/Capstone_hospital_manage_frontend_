@@ -83,34 +83,32 @@
             </div>
             <div class="col-lg-4 col-md-12">
                 <div class="form-floating">
-                    <select [(ngModel)]="doc.specialization" class="form-select">
-        <option selected="" hidden=""></option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
-        </select>
+                    <input [(ngModel)]="doc.specialization" name="specialization" type="text" class="form-control">
+        
+                
                     <label>SPECIALIZATION</label>
                 </div>
             </div>
            
             <div class="col-lg-4 col-md-12">
                 <div class="form-floating">
-                    <select [(ngModel)]="doc.slot_id" class="form-select">
-        <option selected="" hidden="">Open this select menu</option>
-        <option value="1">Economy</option>
-        <option value="2">Premium</option>
-        <option value="3">Business</option>
+                    <select [(ngModel)]="doc.slot_id" name="slot_id" class="form-select">
+        <option value=1>morning</option>
+        <option value=2>afternoon</option>
+        <option value=3>evening</option>
+        <option value=4>morning and evening</option>
+        <option value=5>afternoon and evening</option>
+        <option value=6>morning and afternoon</option>
+        <option value=7>all hours</option>
         </select>
                     <label>DOCTORS SLOTS</label>
                 </div>
             </div>
             <div class="col-lg-4 col-md-12">
                 <div class="form-floating">
-                    <select [(ngModel)]="doc.department_id" class="form-select">
-        <option selected="" hidden=""></option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
+                    <select [(ngModel)]="doc.department_id" name="department_id" class="form-select">
+                      <option value="{{d.id}}"  *ngFor="let d of depts">{{d.department}}</option>
+
         </select>
                     <label>DEPARTMENTS</label>
                 </div>

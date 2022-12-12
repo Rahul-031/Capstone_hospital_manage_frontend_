@@ -3,7 +3,7 @@ import { Component,OnInit } from '@angular/core';
 import { PatientLoginComponent } from './patient-login/patient-login.component';
 import { Router } from '@angular/router';
 import { PatientRegServiceService } from './services/patient-reg-service/patient-reg-service.service';
-import { LoginServiceService } from './services/login-service.service';
+import { LoginServiceService } from './services/login-logoutService/login-service.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
