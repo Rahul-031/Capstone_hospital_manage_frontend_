@@ -6,11 +6,11 @@
             <img src="assets/cardio1.jpg">
         </td>
         <td>
-            <h2>{{d.first_name}} {{d.last_name}}</h2>
+            <h2 >{{d.first_name}} {{d.last_name}}</h2>
             
             <h4>QUALIFICATION</h4>
             <p>{{d.qualification}}</p>
-            <p><input type="submit"  value="Book Appointment" name="submit" style="font-size: 12px;">
+            <p><button (click)="apoint(idpartid.value)" #idpartid value="{{d.first_name}} {{d.last_name}}" ><a  class="btn btn-primary">Book Appointment</a></button>
             <input type="submit" routerLink="/deptlist" value="Go Back" name="submit" style="font-size: 12px;"></p>
         </td>
     </tr>

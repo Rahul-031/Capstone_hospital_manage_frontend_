@@ -18,6 +18,7 @@ export class PatientLoginComponent implements OnInit {
   len:number = this.patient.length
   counter:number=0
   Log:boolean=this.log.counter
+
   
   
   
@@ -47,6 +48,8 @@ export class PatientLoginComponent implements OnInit {
         
         if(i.email==form.value.user && i.pass==form.value.pass){
         console.log(i.email==form.value.user && i.pass==form.value.pass)
+        this.httpClientService.patientname = i.first_name
+        this.httpClientService.patientlastname=i.last_name
         this.router.navigate(['/deptlist'])
         this.log.counter=true
         console.log("lets go")

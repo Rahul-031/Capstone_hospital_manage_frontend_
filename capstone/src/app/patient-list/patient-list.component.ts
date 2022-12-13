@@ -8,9 +8,11 @@ import { NgForm } from '@angular/forms';
 })
 export class PatientListComponent implements OnInit {
   searchtext:String=""
-  patient: patients[] =[]
+  patient: patients[]=[]
   patientt:patients[]=[]
   show= this.patientt.length>0
+
+
   constructor(private httpClientService:PatientRegServiceService) { }
   form!:NgForm
   

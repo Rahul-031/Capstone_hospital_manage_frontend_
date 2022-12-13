@@ -9,6 +9,8 @@ import { doctors } from './doctor';
 export class DoctorRegistrationServiceService {
 
   deptId!:number
+  doctorname!:string
+  doctorlastname!:string
   
   constructor(private httpClient:HttpClient) { 
   }
