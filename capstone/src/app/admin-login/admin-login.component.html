@@ -1,22 +1,22 @@
 <div id="login">
-    <form name=myForm onSubmit action=" " method=GET>
+    <form name=myForm #form ="ngForm" (ngSubmit) ="login(form)" >
         <h1>ADMIN LOGIN</h1>
  <div id="table1"> <table>
         <tr>
         <td> Enter your name : </td>
-        <td> <input type="text" name= "username"  required> </td>
+        <td> <input type="text" ngModel required #user="ngModel" name= "user"  required> </td>
         </tr>
         <tr>
             <td>  Password : </td>
-            <td> <input type="password" name="password"></td>
+            <td> <input type="password" ngModel required #pass="ngModel" name="password"></td>
             </tr>
             <br/>
+           <button> Login </button>
         </table>
         </div> </form>
         <br>
-        <p><input type="submit" routerLink="/admin" value="Submit" name="Submit" style="font-size: 15px;">
-            <input type="reset" value="Reset" name="Reset" style="font-size: 15px;"></p>
-            <input type="submit"  value="Dashboard" style="font-size: 15px;">
+        <p>
+            
             <!-- <button> <a class="button" routerLink="/admin" style="font-size: 15px;">Dashboard</a></button> -->
    
 </div>

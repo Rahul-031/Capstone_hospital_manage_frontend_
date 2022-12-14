@@ -10,7 +10,21 @@ export class PatientListComponent implements OnInit {
   searchtext:String=""
   patient: patients[]=[]
   patientt:patients[]=[]
-  show= this.patientt.length>0
+  
+  
+
+  delete(id:any){
+    console.log(id)
+    this.httpClientService.deletepatById(id).subscribe(data=>{})
+
+     alert('are you sure you want to delete')
+
+    this.httpClientService.getpats().subscribe(data=>{this.patient=data
+      console.log(this.patient)
+       })
+    
+    // window.location.reload()
+  }
 
 
   constructor(private httpClientService:PatientRegServiceService) { }

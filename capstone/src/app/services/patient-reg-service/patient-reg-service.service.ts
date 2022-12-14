@@ -4,6 +4,7 @@ import { VirtualTimeScheduler } from 'rxjs';
 
 export class patients{
 
+    public id:number
     public first_name:string
     public last_name:string
     public gender:string
@@ -17,6 +18,7 @@ export class patients{
  
   
   constructor(
+     id:number,
     first_name:string,
      last_name:string,
      gender:string,
@@ -27,7 +29,8 @@ export class patients{
      id_no:string,
      pass:string,
      status:string
-  ){this.first_name=first_name
+  ){this.id=id
+    this.first_name=first_name
     this.last_name=last_name
     this.gender=gender
     this.dof=dof
@@ -57,5 +60,8 @@ export class PatientRegServiceService {
   }
   public getpatByid(id: number){
     return this.httpClient.get<patients[]>("http://localhost:2020/api/"+id)  
+  }
+  public deletepatById(id:any){
+    return this.httpClient.put<patients>("http://localhost:2020/api/"+id,id)
   }
 }

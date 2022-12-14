@@ -8,7 +8,7 @@ import { proofId } from './id_proof';
 })
 export class PatientRegisterComponent implements OnInit {
   
-  pa : patients = new patients("","","","","","","","","","active")
+  pa : patients = new patients(0,"","","","","","","","","","active")
   
   constructor( private prst: PatientRegServiceService) { }
   id_proof=[new proofId("adhar"),new proofId("voter"),new proofId("pan"), ]

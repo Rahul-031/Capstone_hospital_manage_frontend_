@@ -39,10 +39,13 @@
           <th scope="col">dob</th>
           <th scope="col">email</th>
           <th scope="col">phone Number</th>
+          <th scope="col">Delete</th>
+          
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let p of patient | filter:searchtext">
+          <!-- <div *ngif="show"> -->
           <th>{{p.id}}</th>
           <td>{{p.first_name}}</td>
           <td>{{p.last_name}}</td>
@@ -50,6 +53,8 @@
           <td>{{p.dof}}</td>
           <td>{{p.email}}</td>
           <td>{{p.phone_no}}</td>
+          <td><button (click)="delete(del.value)" #del value="{{p.id}}">Delete - </button></td>
+          <!-- </div> -->
         </tr>
       </tbody>
     </table>

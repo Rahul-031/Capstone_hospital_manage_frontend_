@@ -19,6 +19,7 @@ import { FilterPipe } from './patient-list/addpipes/filter.pipe';
 import { DoctorRegComponent } from './doctor-reg/doctor-reg.component';
 import { DoctorRegAndListComponent } from './doctor-reg-and-list/doctor-reg-and-list.component';
 import { DoctorDepartmentComponent } from './departments/deptlist/doctor-department/doctor-department.component';
+import { AppointmentListComponent } from './appointment-list/appointment-list.component';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { DoctorDepartmentComponent } from './departments/deptlist/doctor-departm
     FilterPipe,
     DoctorRegComponent,
     DoctorRegAndListComponent,
+    AppointmentListComponent,
     
     
      ],
@@ -50,7 +52,8 @@ import { DoctorDepartmentComponent } from './departments/deptlist/doctor-departm
       {path:'patient-register',component: PatientRegisterComponent},
       {path:'patient-list',component: PatientListComponent},
       {path:'doctor-register',component: DoctorRegAndListComponent},
-      {path:'doctor-dept',component: DoctorDepartmentComponent}
+      {path:'doctor-dept',component: DoctorDepartmentComponent},
+      {path:'apoint-list',component:AppointmentListComponent}
      
     ]),
     AppRoutingModule,

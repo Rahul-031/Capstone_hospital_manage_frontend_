@@ -1,6 +1,6 @@
 export class doctors{
     
-    
+      public id!:string
       public first_name!:string
       public last_name!:string
       public gender!:string
@@ -11,7 +11,7 @@ export class doctors{
       public qualification!:string
       public specialization!:string
       public slot_id!:number
-      public department_id!: number
+      public did!: number
       public pass!:string
       public status:string="Active"
       public age!:string

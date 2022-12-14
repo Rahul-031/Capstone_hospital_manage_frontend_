@@ -14,6 +14,7 @@ export class DoctorRegAndListComponent implements OnInit {
   doc:doctors=new doctors()
   constructor(private drst:DoctorRegistrationServiceService,private dept:DepartmentServiceService) { }
   depts:department[]=[]
+  docs:doctors[]=[]
   
 
   ngOnInit(): void {
@@ -21,6 +22,8 @@ export class DoctorRegAndListComponent implements OnInit {
       console.log(this.depts)
       console.log(data)
     })
+    this.drst.getDoctor().subscribe(data=>{this.docs=data
+    console.log(data)})
     
   }
 
@@ -30,6 +33,8 @@ export class DoctorRegAndListComponent implements OnInit {
       alert("successfully registered")
       console.log(data)
     })
+    this.drst.getDoctor().subscribe(data=>{this.docs=data
+      console.log(data)})
   }
 
 }
